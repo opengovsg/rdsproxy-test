@@ -34,6 +34,16 @@ The objective of this experiment was to investigate the behavior of a PostgreSQL
     The program successfully detected multiple mismatches between the parameterizedId and literalId. This indicates that under certain conditions, the RDS Proxy might be causing inconsistencies when routing queries.
     A total of 29 mismatches were reported during the test run.
 
+### Screenshots of metrics
+*From RDS*
+<img width="1129" alt="Screenshot 2024-08-29 at 9 58 17 PM" src="https://github.com/user-attachments/assets/eada5d43-e4ce-4bf9-b1c0-ec8a0f744f11">
+
+<img width="1132" alt="Screenshot 2024-08-29 at 9 57 08 PM" src="https://github.com/user-attachments/assets/2fe953e2-b38e-46cc-b732-0f98094bd4b3">
+
+*From RDS Proxy*
+<img width="953" alt="Screenshot 2024-08-29 at 9 57 50 PM" src="https://github.com/user-attachments/assets/8c6ddfe7-840a-48df-a13b-d5a0757cbfb7">
+
+
 ### Sample of logs
 `mismatch-2024-08-29_21-36-05.log`
 ```
