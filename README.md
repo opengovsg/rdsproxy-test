@@ -33,3 +33,29 @@ The objective of this experiment was to investigate the behavior of a PostgreSQL
    - Mismatches Detected:
     The program successfully detected multiple mismatches between the parameterizedId and literalId. This indicates that under certain conditions, the RDS Proxy might be causing inconsistencies when routing queries.
     A total of 29 mismatches were reported during the test run.
+
+### Sample of logs
+`mismatch-2024-08-29_21-36-05.log`
+```
+MISMATCH DETECTED!
+parameterizedId: POUbhepg7szpwEQGYoJkdD
+literalId: rem2Iswp74SHvffLeqAXSV
+MISMATCH DETECTED!
+parameterizedId: JzojLYkHYQIDU1aroW6Sf3
+literalId: cJyWugAjMm87vEyBL7YegN
+...
+Thread 201: 500 queries completed
+Thread 201: 1000 queries completed
+Thread 442: 1500 queries completed
+MISMATCH DETECTED!
+parameterizedId: w7cCrjkQ8Ucq0iEE4sZdr5
+literalId: nzgFDw5v1RCaAL8mKw3t5M
+Thread 227: 1500 queries completed
+Thread 92: 1500 queries completed
+...
+Thread 70: 1500 queries completed
+Thread 533: 1500 queries completed
+Thread 291: 1500 queries completed
+Thread 434: 1500 queries completed
+Total different results: 29
+```
