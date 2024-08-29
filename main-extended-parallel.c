@@ -5,8 +5,6 @@
 #include <pthread.h>
 #include <sys/time.h>
 
-// Assume necessary imports and constants are defined...
-
 // Struct to hold thread information
 typedef struct {
     int thread_id;
@@ -74,6 +72,7 @@ int execute_query(PGconn *conn, const char *paramValue) {
         printf("MISMATCH DETECTED!\n");
         printf("parameterizedId: %s\n", returnedId);
         printf("literalId: %s\n", literalId);
+        printf("paramValue: %s\n", paramValue);
     }
 
     PQclear(res);
